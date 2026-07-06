@@ -7,6 +7,8 @@ import asyncio
 import json
 import os
 import logging
+import subprocess
+import sys
 from datetime import datetime
 from pathlib import Path
 
@@ -16,11 +18,22 @@ from flask_cors import CORS
 from scrap_main import GoogleMapsKeywordScraper, ContextPool
 from playwright.async_api import async_playwright
 
-app = Flask(__name__)
-CORS(app)
-
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Install Chromium at runtime (Render does not persist build cache to runtime)
+logger.info("Installing Chromium...")
+result = subprocess.run(
+    [sys.executable, "-m", "playwright", "install", "chromium"],
+    capture_output=True, text=True
+)
+if result.returncode == 0:
+    logger.info("Chromium installed successfully")
+else:
+    logger.warning(f"playwright install failed: {result.stderr}")
+
+app = Flask(__name__)
+CORS(app)
 
 # Configuration
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
