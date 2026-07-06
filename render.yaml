@@ -18,9 +18,5 @@ services:
       - key: PYTHONUNBUFFERED
         value: "1"
     
-    # Memory and CPU
-    memoryLimit: 2G
-    cpuCount: 2
-    
     # Timeouts (for long-running scraping jobs)
     maxShutdownDelaySecs: 30
