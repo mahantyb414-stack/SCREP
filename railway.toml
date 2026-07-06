@@ -1,0 +1,10 @@
+[build]
+builder = "railpack"
+buildCommand = "pip install -r requirements.txt && playwright install chromium"
+
+[deploy]
+startCommand = "python3 app.py"
+restartPolicyType = "on_failure"
+
+[build.env]
+MISE_PYTHON_GITHUB_ATTESTATIONS = "false"
