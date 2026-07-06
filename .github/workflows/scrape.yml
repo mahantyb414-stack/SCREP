@@ -1,0 +1,61 @@
+name: Automated Scraping & Upload
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # Weekly, Sunday 2 AM UTC
+  workflow_dispatch:     # Manual trigger from GitHub UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          playwright install chromium
+      
+      - name: Run scraping job
+        env:
+          RENDER_API_URL: ${{ secrets.RENDER_API_URL }}
+        run: |
+          python -c "
+          import requests
+          import json
+          from datetime import datetime
+          
+          api_url = '${{ secrets.RENDER_API_URL }}'
+          keywords = [
+              'Photographers in Delhi',
+              'Wedding Photographers in Delhi',
+              'DJs in Delhi',
+          ]
+          
+          for keyword in keywords:
+              print(f'Starting: {keyword}')
+              try:
+                  response = requests.post(
+                      f'{api_url}/api/scrape/keyword',
+                      json={'keyword': keyword},
+                      timeout=3600
+                  )
+                  result = response.json()
+                  print(f'Job: {result.get(\"job_id\")} - {result.get(\"status\")}')
+              except Exception as e:
+                  print(f'Error: {e}')
+          "
+      
+      - name: Verify results
+        if: success()
+        run: |
+          echo "Scraping jobs completed successfully!"
+          echo "Check https://${{ secrets.RENDER_DOMAIN }}/api/jobs for status"

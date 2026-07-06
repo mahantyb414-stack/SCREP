@@ -1,0 +1,214 @@
+# ---------------------------------------------------------------
+# matcher.yaml — edit this file only to change filter behaviour
+# categories    : exact match against gmaps_category (case-insensitive)
+# name_keywords : substring match against gmaps_name  (case-insensitive)
+# A record is KEPT if it matches either list.
+# ---------------------------------------------------------------
+categories:
+  # Core Photography
+  - Photography studio
+  - Photography service
+  - Photographer
+  - Professional photographer
+  - Freelance photographer
+  - Photography company
+  - Commercial photographer
+  - Creative photography studio
+  - Digital photography studio
+  - Photography agency
+  - Photography consultant
+
+  # Wedding & Events
+  - Wedding photographer
+  - Wedding photography studio
+  - Wedding portrait studio
+  - Pre wedding photographer
+  - Candid wedding photographer
+  - Destination wedding photographer
+  - Engagement photographer
+  - Bridal photographer
+  - Event photographer
+  - Birthday photographer
+  - Party photographer
+  - Corporate event photographer
+  - Reception photographer
+  - Anniversary photographer
+  - Baby shower photographer
+  - Maternity photographer
+
+  # Portrait & Personal
+  - Portrait studio
+  - Portrait photographer
+  - Family photographer
+  - Kids photographer
+  - Baby photographer
+  - Newborn photographer
+  - Fashion photographer
+  - Glamour photographer
+  - Model portfolio studio
+  - Portfolio photographer
+  - Headshot photographer
+  - Actor portfolio photographer
+  - Personal branding photographer
+  - Lifestyle photographer
+  - Fine art photographer
+
+  # Commercial & Business
+  - Advertising Photographer
+  - Product photographer
+  - Ecommerce photographer
+  - Food photographer
+  - Jewelry photographer
+  - Real estate photographer
+  - Architecture photographer
+  - Interior photographer
+  - Industrial photographer
+  - Automotive photographer
+  - Corporate photographer
+  - Brand photographer
+  - Catalogue photographer
+  - Business photography service
+
+  # Specialized Photography
+  - Aerial photographer
+  - Drone photographer
+  - Drone service
+  - Underwater photographer
+  - Wildlife photographer
+  - Nature photographer
+  - Sports photographer
+  - Travel photographer
+  - Documentary photographer
+  - Street photographer
+  - Medical photographer
+  - Scientific photographer
+  - Forensic photographer
+  - Pet photographer
+
+  # Photo Processing & Printing
+  - Photo shop
+  - Photo lab
+  - Digital photo lab
+  - Passport photo processor
+  - Instant photo printing service
+  - Photo printing service
+  - Canvas printing service
+  - Photo framing service
+  - Photo enlargement service
+  - Film developing service
+  - Film processing lab
+  - Color lab
+  - Photo Restoration Shop
+  - Photo retouching service
+  - Photo editing service
+  - Image restoration service
+
+  # Photo Booth & Rental
+  - Photo booth
+  - Selfie booth rental
+  - Wedding photo booth
+  - Event photo booth
+  - Photography equipment rental
+  - Camera rental service
+  - Studio lighting rental
+
+  # Education & Training
+  - Photography Institute
+  - Photography Class
+  - Photography school
+  - Photography training center
+  - Photography workshop
+  - Photography coaching
+  - Videography training institute
+  - Editing training institute
+  - Film making institute
+
+  # Video & Production
+  - Video production service
+  - Video editing service
+  - Videographer
+  - Wedding videographer
+  - Commercial video production
+  - Corporate video production
+  - Music video production
+  - Documentary film production
+  - Film Production Company
+  - Movie studio
+  - Animation Studio
+  - CGI studio
+  - Media production company
+  - Multimedia company
+  - Production house
+  - Podcast video studio
+  - YouTube video production service
+  - Reel shooting service
+
+  # Studio & Creative Spaces
+  - Creative studio
+  - Content creation studio
+  - Podcast studio
+  - Green screen studio
+  - Rental studio
+  - Indoor photography studio
+  - Outdoor photography studio
+  - Film studio
+  - Recording studio
+  - Creator studio
+
+  # Agency & Media
+  - Photo agency
+  - Media agency
+  - Creative agency
+  - Branding agency
+  - Visual content agency
+  - Talent portfolio agency
+  - Digital media agency
+  - Influencer content studio
+
+  # Libraries & Archives
+  - Film and photograph library
+  - Photo archive
+  - Digital image archive
+  - Historical photograph archive
+  - Stock photography agency
+  - Image licensing agency
+
+  # Drone & Mapping
+  - Drone videography service
+  - Aerial imaging service
+  - Survey drone service
+  - Mapping drone service
+  - Inspection drone service
+  - Real estate drone photography
+  - Agricultural drone photography
+
+  # GMB / SEO Keyword Variations
+  - Best photographer near me
+  - Best wedding photographer
+  - Affordable photography studio
+  - Cheap passport photo service
+  - Professional photo studio
+  - Same day photo printing
+  - Event photography service
+  - Top photography studio
+  - Local photographer
+  - Nearby photo studio
+  - Photography services near me
+  - Drone photography service
+  - Corporate photography agency
+  - Ecommerce product photography
+  - Cinematic wedding videography
+name_keywords:
+  - photo
+  - photograph
+  - photographer
+  - photography
+  - studio
+  - portrait
+  - wedding film
+  - cinemat
+  - videograph
+  - candid
+  - drone shoot
+  - pre-wedding
+  - prewedding

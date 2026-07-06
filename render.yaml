@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: scraping-delhi
+    runtime: python
+    pythonVersion: 3.11
+    
+    # Build and start commands
+    buildCommand: "pip install -r requirements.txt && playwright install chromium"
+    startCommand: "python app.py"
+    
+    # Port configuration
+    port: 5000
+    
+    # Environment variables
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    
+    # Memory and CPU
+    memoryLimit: 2G
+    cpuCount: 2
+    
+    # Timeouts (for long-running scraping jobs)
+    maxShutdownDelaySecs: 30
